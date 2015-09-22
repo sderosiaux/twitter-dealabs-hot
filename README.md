@@ -1,3 +1,3 @@
 # twitter-dealabs-hot
 
-WIP
+https://twitter.com/dealabs_hot
