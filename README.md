@@ -1,3 +1,3 @@
 # twitter-dealabs-hot
 
-https://twitter.com/dealabs_hot
+https://twitter.com/hotdealabs
