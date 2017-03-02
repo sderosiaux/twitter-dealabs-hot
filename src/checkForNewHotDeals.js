@@ -13,10 +13,10 @@ export default function checkNewHotDeals() {
     .then(body => {
       const $ = cheerio.load(body);
       // limit length 140 = 93 + 47 (" http://t.co/71yqLEdXZU http://t.co/71yqLEdXZU")
-      const deals = $('.contener_liste_deal_index').map((_, el) => ({
-        text: $(el).find('.title a').find('span').remove().end().text().substring(0, 93),
-        href: $(el).find('.title a').attr('href'),
-        img: $(el).find('.image_contener a > img').attr('src'),
+      const deals = $('article.deal_index_article').map((_, el) => ({
+        text: $(el).find('a.title').text().substring(0, 93),
+        href: $(el).find('a.title').attr('href'),
+        img: $(el).find('.image_part_contener img').attr('src'),
       })).get();
 
       deals.forEach(deal => tweetIfNotDoneYet(deal));
